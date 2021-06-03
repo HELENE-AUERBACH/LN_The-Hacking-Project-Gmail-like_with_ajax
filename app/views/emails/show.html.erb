@@ -1,0 +1,22 @@
+<% if !@email_hash['email'].nil? && user_signed_in? %>
+  <h1>Voici la page de l'email n°<%= @email_hash['index'] %></h1>
+  <BR>
+  <% if !notice.nil? %>
+    <div class="alert alert-success" role="alert">
+      <p id="notice"><%= notice %></p>
+    </div>
+  <% end %>
+  <BR>
+  <div>
+    <p>Son objet : <%= @email_hash['email'].object %></p>
+    <p>Son contenu : <p class="content"><%= @email_hash['email'].body %></p></p>
+  </div>
+<% elsif @email_hash['email'].nil? %>
+  <div class="alert alert-danger" role="alert">
+    <p>Aucun email de n°<%= @email_hash['index'] %> n'existe dans la base!</p>
+  </div>
+<% else %>
+  <div class="alert alert-danger" role="alert">
+    <p>Tu n'es pas connecté : tu n'es donc pas autorisé à visualiser les détails de cet email!</p>
+  </div>
+<% end %>

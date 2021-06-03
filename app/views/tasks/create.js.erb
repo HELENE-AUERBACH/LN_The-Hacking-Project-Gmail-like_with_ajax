@@ -1,0 +1,12 @@
+let categoryId = <%= @task.category.id %>
+alert(`Le fichier JS est exécuté pour la catégorie : ${categoryId}`);
+if (categoryId == 1) {
+  alert("Ici");
+  document.querySelector('body > div.container > div:nth-child(2) > ul > div:nth-child(2) > ul').insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+} else if (categoryId == 2) {
+  alert("Là");
+  document.querySelector('body > div.container > div:nth-child(2) > ul > div:nth-child(4) > ul').insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+} else {
+  alert("Ou là");
+  document.querySelector('body > div.container > div:nth-child(2) > ul > div:nth-child(6) > ul').insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+}
