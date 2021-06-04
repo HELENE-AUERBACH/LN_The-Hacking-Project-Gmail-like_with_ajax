@@ -60,5 +60,5 @@ ln-to_do_list_with_ajax$ heroku run rails db:seed
 
 * How to run the test suite
 
-ln-to_do_list_with_ajax$ heroku open (=> https://ln-thp-ln-to_do_list_with_ajax.herokuapp.com )
+ln-to_do_list_with_ajax$ heroku open (=>  https://ln-thp-ln-to-do-list-with-ajax.herokuapp.com/)
 
