@@ -1,4 +1,4 @@
 <tr style = "color: red;">
-  <td><%= link_to "#{email.object}", email_path(email.id) %></td>
-  <td><%= email.body %></td>
+  <td id="email_<%= email.id %>"><%= link_to "#{email.object}", email_path(email.id), remote: true %></td>
+  <td></td>
 </tr>

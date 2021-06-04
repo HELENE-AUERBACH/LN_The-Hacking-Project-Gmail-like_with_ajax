@@ -8,7 +8,7 @@
   <% end %>
   <BR>
   <div>
-    <p>Son objet : <%= @email_hash['email'].object %></p>
+    <h4>Son objet : <%= @email_hash['email'].object %></h4>
     <p>Son contenu : <p class="content"><%= @email_hash['email'].body %></p></p>
   </div>
 <% elsif @email_hash['email'].nil? %>

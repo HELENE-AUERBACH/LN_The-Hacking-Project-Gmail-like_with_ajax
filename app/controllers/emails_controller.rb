@@ -46,6 +46,10 @@ class EmailsController < ApplicationController
 
   def show
     @email = get_email_hash
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { }
+    end
   end
 
   private
